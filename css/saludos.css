@@ -1,0 +1,235 @@
+
+body {
+margin: 0;
+padding: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(135deg, #031317, #6a0dc2);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+overflow: hidden;
+}
+.card {
+background: white;
+border-radius: 20px;
+padding: 2rem;
+max-width: 400px;
+text-align: center;
+box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+position: relative;
+animation: fadeIn 1.5s ease;
+}
+.card h1 {
+font-size: 2rem;
+margin-bottom: 0.5rem; 
+color: #940c9e;
+animation: bounce 1.2s infinite alternate;
+}
+.max{
+width: 150px;
+border-radius: 50%;
+} 
+.komuny{
+  width: 120px;
+  border-radius: 50%;
+  margin-top: 10px;   
+} 
+.Mizzie{
+  width: 120px;
+  border-radius: 50%;
+  margin-top: 10px;   
+}
+.pf4{
+  width: 120px;
+  border-radius: 50%;
+  margin-top: 10px;   
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    animation: slideUp 0.8s ease-out;
+}
+.morado {
+  color: purple; /* 💜 color morado */
+  font-weight: bold; /* opcional: resaltar */
+}
+
+.acrostico p {
+  margin: 0;
+  line-height: 1.3;
+  padding: 9px; /* espacio para la "columna" de letras */
+}
+
+.inicial {
+  display: inline-block;
+  width: 25px;        /* ancho fijo de la "columna" de letras */
+  text-align: center; /* centrado dentro de ese bloque */
+  color: purple;      /* 💜 morado */
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+footer  p{
+  margin-top: 9px;
+  font-size: 0.9rem;
+  color: #e3deeb;
+  text-align: center;
+}
+@keyframes typing {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+footer p {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #e3deeb;
+    animation: typing 3.5s steps(40, end),
+               blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #e3deeb; }
+}
+
+/* 🎨 Estilos adicionales sin modificar los existentes */
+
+/* Botón de sorpresa */
+.btn {
+  background: linear-gradient(135deg, #940c9e, #6a0dc2);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(106, 13, 194, 0.4);
+}
+
+/* Animación confeti */
+.confetti {
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: caer linear forwards;
+}
+
+@keyframes caer {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Estilo para párrafos */
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+  margin-top: 1rem;
+  animation: fadeIn 2s ease;
+}
+
+/* Animación de entrada general */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Decoración footer */
+footer p {
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+footer p:hover {
+  color: #ffffff;
+  transition: color 0.3s ease;
+
+}
+
+.card {
+  max-height: 80vh;   /* ocupa hasta el 80% de la pantalla */
+  overflow-y: auto;   /* agrega scroll interno si el contenido es largo */
+  scrollbar-width: thin; 
+  scrollbar-color: #6a0dc2 #f0f0f0; /* colores del scroll en Firefox */
+}
+
+/* Scroll personalizado para Chrome/Edge/Safari */
+.card::-webkit-scrollbar {
+  width: 8px;
+}
+.card::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+.card::-webkit-scrollbar-thumb {
+  background: #6a0dc2;
+  border-radius: 10px;
+}
+.card::-webkit-scrollbar-thumb:hover {
+  background: #940c9e;
+}
+
+.card {
+    margin-bottom: 100px;  /* Adds space between card and footer */
+}
+
+
+@media screen and (max-width: 600px) {
+    .card {
+        max-width: 90%;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .card h1 {
+        font-size: 1.5rem;
+    }
+
+    .max, .komuny, .Mizzie {
+        width: 100px;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,75 @@
+body {
+margin: 0;
+padding: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(135deg, #031317, #6a0dc2);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+overflow: hidden;
+}
+.card {
+background: white;
+border-radius: 20px;
+padding: 2rem;
+max-width: 400px;
+text-align: center;
+box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+position: relative;
+animation: fadeIn 1.5s ease;
+}
+.card h1 {
+font-size: 2rem;
+margin-bottom: 0.5rem;
+color: #940c9e;
+animation: bounce 1.2s infinite alternate;
+}
+.card p {
+font-size: 1.1rem;
+color: #333;
+margin-bottom: 1rem;
+}
+.card img {
+width: 150px;
+border-radius: 50%;
+margin-bottom: 1rem;
+}
+.btn {
+display: inline-block;
+background: #811693;
+color: white;
+padding: 0.6rem 1.2rem;
+border-radius: 30px;
+text-decoration: none;
+font-weight: bold;
+transition: background 0.3s;
+cursor: pointer;
+}
+.btn:hover {
+background: #a61e66;
+}
+/* Confeti */
+.confetti {
+position: absolute;
+top: -10px;
+width: 10px;
+height: 10px;
+background-color: red;
+opacity: 0.7;
+animation: fall linear forwards;
+}
+@keyframes fall {
+to {
+transform: translateY(110vh) rotate(360deg);
+opacity: 0;
+}
+}
+@keyframes fadeIn {
+from { opacity: 0; transform: scale(0.8); }
+to { opacity: 1; transform: scale(1); }
+}
+@keyframes bounce {
+from { transform: translateY(0); }
+to { transform: translateY(-10px); }
+}
